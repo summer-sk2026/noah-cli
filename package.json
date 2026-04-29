@@ -1,0 +1,17 @@
+{
+  "name": "noah-cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "noah": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --platform node --target node20 --out-dir dist --clean --minify --no-splitting --no-dts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
